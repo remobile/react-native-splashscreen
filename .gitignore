@@ -1,0 +1,10 @@
+*.[aod]
+*.DS_Store
+.DS_Store
+*Thumbs.db
+.gradle
+.idea
+npm-debug.log
+/android/RCTDes/build
+/ios/**/*xcuserdata*
+/ios/**/*xcshareddata*
