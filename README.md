@@ -118,9 +118,6 @@ var KitchenSink = React.createClass({
 AppRegistry.registerComponent('KitchenSink', () => KitchenSink);
 ```
 
-### HELP
-* look https://github.com/apache/cordova-plugin-splashscreen
 
-
-### thanks
-* this project come from https://github.com/apache/cordova-plugin-splashscreen
+### methods
+- hide() hide SplashScreenÂ
