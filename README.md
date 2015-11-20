@@ -11,11 +11,11 @@ npm install @remobile/react-native-splashscreen --save
 * Look for Header Search Paths and make sure it contains $(SRCROOT)/../../../react-native/React as recursive.
 
 * In your project, Look for Header Search Paths and make sure it contains $(SRCROOT)/../node_modules/@remobile/react-native-splashscreen/ios/CRTSplashScreen
-* In AppDelegate
 
 * delete your project's LaunchScreen.xib
 * Dray SplashScreenResource to your project [if you want change image, replace splash.png]
 
+* In AppDelegate.m
 ```objc
 ...
 #import "CRTSplashScreen.h" //<--- import
