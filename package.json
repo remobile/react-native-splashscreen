@@ -1,7 +1,7 @@
 {
-    "name": "react-native-splashscreen",
+    "name": "@remobile/react-native-splashscreen",
         "version": "1.0.0",
-        "description": "A splashscreen for react-native",
+        "description": "A splashscreen for react-native, hide when application loaded",
         "main": "index.js",
         "author": {
             "name": "YunJiang.Fang",
@@ -14,6 +14,10 @@
             "ios",
             "android",
             "splashscreen",
+            "splash",
+            "launchui",
+            "show",
+            "hide",
             "remobile",
             "mobile"
         ],

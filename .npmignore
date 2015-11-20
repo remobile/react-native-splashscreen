@@ -1,12 +1,12 @@
-*.[aod]
 *.DS_Store
 .DS_Store
 *Thumbs.db
-*.iml
 .gradle
 .idea
-node_modules
+*.iml
 npm-debug.log
+node_modules
 /android/build
 /ios/**/*xcuserdata*
 /ios/**/*xcshareddata*
+
