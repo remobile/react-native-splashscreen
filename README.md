@@ -120,4 +120,4 @@ AppRegistry.registerComponent('KitchenSink', () => KitchenSink);
 
 
 ### methods
-- hide() hide SplashScreenÂ
+- hide() hide SplashScreen
