@@ -102,7 +102,9 @@ var SplashScreen = require('@remobile/react-native-splashscreen');
 
 var KitchenSink = React.createClass({
     componentDidMount: function() {
-        SplashScreen.hide();
+        SplashScreen.hide({
+          duration: 1 // Dissolve duration in seconds
+        });
     },
     render() {
         return(
