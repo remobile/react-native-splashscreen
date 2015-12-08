@@ -1,20 +1,20 @@
 //
-//  CRTSplashScreen.m
-//  CRTSplashScreen
+//  RCTSplashScreen.m
+//  RCTSplashScreen
 //
 //  Created by fangyunjiang on 15/11/20.
 //  Copyright (c) 2015年 remobile. All rights reserved.
 //
 
-#import "CRTSplashScreen.h"
+#import "RCTSplashScreen.h"
 
 static RCTRootView *rootView = nil;
 
-@interface CRTSplashScreen()
+@interface RCTSplashScreen()
 
 @end
 
-@implementation CRTSplashScreen
+@implementation RCTSplashScreen
 
 RCT_EXPORT_MODULE(SplashScreen)
 

@@ -10,7 +10,7 @@ npm install @remobile/react-native-splashscreen --save
 * Click on your main project file (the one that represents the .xcodeproj) select Build Phases and drag libRCTSplashScreen.a from the Products folder inside the RCTSplashScreen.xcodeproj.
 * Look for Header Search Paths and make sure it contains $(SRCROOT)/../../../react-native/React as recursive.
 
-* In your project, Look for Header Search Paths and make sure it contains $(SRCROOT)/../node_modules/@remobile/react-native-splashscreen/ios/CRTSplashScreen
+* In your project, Look for Header Search Paths and make sure it contains $(SRCROOT)/../node_modules/@remobile/react-native-splashscreen/ios/RCTSplashScreen
 
 * delete your project's LaunchScreen.xib
 * Dray SplashScreenResource to your project [if you want change image, replace splash.png]
@@ -18,13 +18,13 @@ npm install @remobile/react-native-splashscreen --save
 * In AppDelegate.m
 ```objc
 ...
-#import "CRTSplashScreen.h" //<--- import
+#import "RCTSplashScreen.h" //<--- import
 ...
 RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"KitchenSink"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
-  [CRTSplashScreen show:rootView]; //<--- add show SplashScreen
+  [RCTSplashScreen show:rootView]; //<--- add show SplashScreen
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [[UIViewController alloc] init];

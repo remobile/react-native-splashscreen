@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3245CDF11BFEE35C00EABF68 /* CRTSplashScreen.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3245CDF01BFEE35C00EABF68 /* CRTSplashScreen.h */; };
-		3245CDF31BFEE35C00EABF68 /* CRTSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245CDF21BFEE35C00EABF68 /* CRTSplashScreen.m */; };
+		3245CDF11BFEE35C00EABF68 /* RCTSplashScreen.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3245CDF01BFEE35C00EABF68 /* RCTSplashScreen.h */; };
+		3245CDF31BFEE35C00EABF68 /* RCTSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3245CDF21BFEE35C00EABF68 /* RCTSplashScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,16 +18,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				3245CDF11BFEE35C00EABF68 /* CRTSplashScreen.h in CopyFiles */,
+				3245CDF11BFEE35C00EABF68 /* RCTSplashScreen.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3245CDED1BFEE35C00EABF68 /* libCRTSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCRTSplashScreen.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3245CDF01BFEE35C00EABF68 /* CRTSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CRTSplashScreen.h; sourceTree = "<group>"; };
-		3245CDF21BFEE35C00EABF68 /* CRTSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CRTSplashScreen.m; sourceTree = "<group>"; };
+		3245CDED1BFEE35C00EABF68 /* libRCTSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTSplashScreen.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3245CDF01BFEE35C00EABF68 /* RCTSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTSplashScreen.h; sourceTree = "<group>"; };
+		3245CDF21BFEE35C00EABF68 /* RCTSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTSplashScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		3245CDE41BFEE35C00EABF68 = {
 			isa = PBXGroup;
 			children = (
-				3245CDEF1BFEE35C00EABF68 /* CRTSplashScreen */,
+				3245CDEF1BFEE35C00EABF68 /* RCTSplashScreen */,
 				3245CDEE1BFEE35C00EABF68 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,26 +52,26 @@
 		3245CDEE1BFEE35C00EABF68 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3245CDED1BFEE35C00EABF68 /* libCRTSplashScreen.a */,
+				3245CDED1BFEE35C00EABF68 /* libRCTSplashScreen.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3245CDEF1BFEE35C00EABF68 /* CRTSplashScreen */ = {
+		3245CDEF1BFEE35C00EABF68 /* RCTSplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				3245CDF01BFEE35C00EABF68 /* CRTSplashScreen.h */,
-				3245CDF21BFEE35C00EABF68 /* CRTSplashScreen.m */,
+				3245CDF01BFEE35C00EABF68 /* RCTSplashScreen.h */,
+				3245CDF21BFEE35C00EABF68 /* RCTSplashScreen.m */,
 			);
-			path = CRTSplashScreen;
+			path = RCTSplashScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3245CDEC1BFEE35C00EABF68 /* CRTSplashScreen */ = {
+		3245CDEC1BFEE35C00EABF68 /* RCTSplashScreen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3245CE011BFEE35C00EABF68 /* Build configuration list for PBXNativeTarget "CRTSplashScreen" */;
+			buildConfigurationList = 3245CE011BFEE35C00EABF68 /* Build configuration list for PBXNativeTarget "RCTSplashScreen" */;
 			buildPhases = (
 				3245CDE91BFEE35C00EABF68 /* Sources */,
 				3245CDEA1BFEE35C00EABF68 /* Frameworks */,
@@ -81,9 +81,9 @@
 			);
 			dependencies = (
 			);
-			name = CRTSplashScreen;
-			productName = CRTSplashScreen;
-			productReference = 3245CDED1BFEE35C00EABF68 /* libCRTSplashScreen.a */;
+			name = RCTSplashScreen;
+			productName = RCTSplashScreen;
+			productReference = 3245CDED1BFEE35C00EABF68 /* libRCTSplashScreen.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3245CDE81BFEE35C00EABF68 /* Build configuration list for PBXProject "CRTSplashScreen" */;
+			buildConfigurationList = 3245CDE81BFEE35C00EABF68 /* Build configuration list for PBXProject "RCTSplashScreen" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3245CDEC1BFEE35C00EABF68 /* CRTSplashScreen */,
+				3245CDEC1BFEE35C00EABF68 /* RCTSplashScreen */,
 			);
 		};
 /* End PBXProject section */
@@ -122,7 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3245CDF31BFEE35C00EABF68 /* CRTSplashScreen.m in Sources */,
+				3245CDF31BFEE35C00EABF68 /* RCTSplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +238,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3245CDE81BFEE35C00EABF68 /* Build configuration list for PBXProject "CRTSplashScreen" */ = {
+		3245CDE81BFEE35C00EABF68 /* Build configuration list for PBXProject "RCTSplashScreen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3245CDFF1BFEE35C00EABF68 /* Debug */,
@@ -247,7 +247,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3245CE011BFEE35C00EABF68 /* Build configuration list for PBXNativeTarget "CRTSplashScreen" */ = {
+		3245CE011BFEE35C00EABF68 /* Build configuration list for PBXNativeTarget "RCTSplashScreen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3245CE021BFEE35C00EABF68 /* Debug */,
