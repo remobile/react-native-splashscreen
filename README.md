@@ -63,7 +63,6 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    mSplashScreenPackage = ;// <--- alloc package
 
     mReactInstanceManager = ReactInstanceManager.builder()
       .setApplication(getApplication())
