@@ -39,7 +39,7 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
 ```gradle
 ...
 include ':react-native-splashscreen'
-project(':react-native-splashscreen').projectDir = new File(rootProject.projectDir, '../node_modules/@remobile/react-native-splashscreen/android')
+project(':react-native-splashscreen').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-splashscreen/android')
 ```
 
 * In `android/app/build.gradle`
@@ -53,33 +53,34 @@ dependencies {
 ```
 * if you want change image, replace res/drawable/splash.png
 
+* register module (in MainApplication.java)
+
+```java
+......
+import com.remobile.splashscreen.RCTSplashScreenPackage;  // <--- import
+
+......
+
+@Override
+protected List<ReactPackage> getPackages() {
+   ......
+   new RCTSplashScreenPackage(MainActivity.activity),            // <------ add here
+   ......
+}
+
+```
+
 * register module (in MainActivity.java)
 
 ```java
-import com.remobile.splashscreen.*;  // <--- import
-
-public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
-  ......
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-
-    mReactInstanceManager = ReactInstanceManager.builder()
-      .setApplication(getApplication())
-      .setBundleAssetName("index.android.bundle")
-      .setJSMainModuleName("index.android")
-      .addPackage(new MainReactPackage())
-      .addPackage(new RCTSplashScreenPackage(this))              // <------ add here
-      .setUseDeveloperSupport(BuildConfig.DEBUG)
-      .setInitialLifecycleState(LifecycleState.RESUMED)
-      .build();
-
-    mReactRootView.startReactApplication(mReactInstanceManager, "ExampleRN", null);
-
-    setContentView(mReactRootView);
-  }
-
-  ......
+public class MainActivity extends ReactActivity {
+    public static Activity activity;           // <------ add here
+    ......
+    @Override
+    protected String getMainComponentName() {
+        activity = this;           // <------ add here
+        ......
+    }
 }
 ```
 
@@ -91,12 +92,13 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 ### Example
 ```js
 'use strict';
-var React = require('react-native');
+var React = require('react');
+var ReactNative = require('react-native');
 var {
     AppRegistry,
     View,
     Text,
-} = React;
+} = ReactNative;
 var SplashScreen = require('@remobile/react-native-splashscreen');
 
 var KitchenSink = React.createClass({
@@ -120,3 +122,9 @@ AppRegistry.registerComponent('KitchenSink', () => KitchenSink);
 
 ### methods
 - hide() hide SplashScreen
+
+
+### see detail use
+* https://github.com/remobile/react-native-template
+
+### the best way use SplashScreen in splash.js in [example](https://github.com/remobile/react-native-splashscreen/blob/master/examples/splash.js)
