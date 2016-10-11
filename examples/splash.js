@@ -15,7 +15,6 @@ var TimerMixin = require('react-timer-mixin');
 var SplashScreen = require('@remobile/react-native-splashscreen');
 var Login = require('../login/Login.js');
 var Home = require('../home/index.js');
-var StudyNum = require('../../data/StudyNum.js');
 var Update = require('@remobile/react-native-update');
 
 var {ProgressBar} = COMPONENTS;
@@ -127,16 +126,6 @@ module.exports = React.createClass({
             context['userID'] = app.personal.info.userID;
             context['phone'] = app.personal.info.phone;
             app.personal.set(context);
-            var StudyNumInfo = StudyNum.info;
-            if (StudyNumInfo == null) {
-                StudyNum.set({'time': app.utils.getCurrentDateString(), 'num': 0});
-            } else {
-                if (StudyNumInfo.time < app.utils.getCurrentDateString()) {
-                    StudyNumInfo.time = app.utils.getCurrentDateString();
-                    StudyNumInfo.num = 0;
-                    StudyNum.set(StudyNumInfo);
-                }
-            }
             this.changeToHomePage();
         } else {
             this.getInfoError();
