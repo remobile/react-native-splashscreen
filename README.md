@@ -36,6 +36,8 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
 
 
 ### Installation (Android)
+* In `android/settings.gradle`
+
 ```gradle
 ...
 include ':react-native-splashscreen'
