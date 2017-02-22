@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 remobile. All rights reserved.
 //
 
-#import "RCTBridgeModule.h"
-#import "RCTRootView.h"
+#import <React/RCTBridgeModule.h>
+#import <React/RCTRootView.h>
 
 @interface RCTSplashScreen : NSObject <RCTBridgeModule>
 
