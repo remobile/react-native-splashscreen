@@ -5,6 +5,7 @@
 .idea
 *.iml
 npm-debug.log
+screencasts
 node_modules
 /android/build
 /ios/**/*xcuserdata*

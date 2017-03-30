@@ -1,8 +1,7 @@
 'use strict';
 
-
-var ReactNative = require('react-native');
-var {
+const ReactNative = require('react-native');
+const {
     NativeModules,
 } = ReactNative;
 
