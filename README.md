@@ -7,7 +7,7 @@ npm install @remobile/react-native-splashscreen --save
 ```
 ### Installation (iOS)
 * Drag RCTSplashScreen.xcodeproj to your project on Xcode.
-* Click on your main project file (the one that represents the .xcodeproj) select Build Phases and drag libRCTSplashScreen.a from the Products folder inside the RCTSplashScreen.xcodeproj.
+* Click on your main project file (the one that represents the .xcodeproj) select Build Phases and drag libRCTSplashScreen.a from the Products folder inside the RCTSplashScreen.xcodeproj to "Link Binary With Libraries".
 * Look for Header Search Paths and make sure it contains $(SRCROOT)/../../../react-native/React as recursive.
 
 * In your project, Look for Header Search Paths and make sure it contains $(SRCROOT)/../node_modules/@remobile/react-native-splashscreen/ios/RCTSplashScreen
