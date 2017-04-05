@@ -120,7 +120,7 @@ public class RCTSplashScreen extends ReactContextBaseJavaModule {
                 }
                 splashDialog.setContentView(splashImageView);
                 splashDialog.setCancelable(false);
-                if (!activity.isFinishing()) {
+                if (activity != null && !activity.isFinishing()) {
                     splashDialog.show();
                 }
             }
