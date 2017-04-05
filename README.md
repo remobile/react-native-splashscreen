@@ -64,7 +64,7 @@ import com.remobile.splashscreen.RCTSplashScreenPackage;  // <--- import
 @Override
 protected List<ReactPackage> getPackages() {
    ......
-   new RCTSplashScreenPackage(MainActivity.activity),            // <------ add here
+   new RCTSplashScreenPackage(MainActivity.activity, true),            // <------ add here [the seconde params is translucent]
    ......
 }
 

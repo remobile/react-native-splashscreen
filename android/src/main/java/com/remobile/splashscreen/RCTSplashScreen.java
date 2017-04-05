@@ -25,10 +25,12 @@ public class RCTSplashScreen extends ReactContextBaseJavaModule {
     private ImageView splashImageView;
 
     private Activity activity;
+    private boolean translucent;
 
-    public RCTSplashScreen(ReactApplicationContext reactContext, Activity activity) {
+    public RCTSplashScreen(ReactApplicationContext reactContext,  Activity activity, boolean translucent) {
         super(reactContext);
         this.activity = activity;
+        this.translucent = translucent;
         showSplashScreen();
     }
 
@@ -109,12 +111,12 @@ public class RCTSplashScreen extends ReactContextBaseJavaModule {
                 splashImageView.setScaleType(ImageView.ScaleType.FIT_XY);
 
                 // Create and show the dialog
-                splashDialog = new Dialog(context, android.R.style.Theme_Translucent_NoTitleBar);
+                splashDialog = new Dialog(context, translucent ? android.R.style.Theme_Translucent_NoTitleBar_Fullscreen : android.R.style.Theme_Translucent_NoTitleBar);
                 // check to see if the splash screen should be full screen
                 if ((getActivity().getWindow().getAttributes().flags & WindowManager.LayoutParams.FLAG_FULLSCREEN)
-                        == WindowManager.LayoutParams.FLAG_FULLSCREEN) {
+                == WindowManager.LayoutParams.FLAG_FULLSCREEN) {
                     splashDialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                            WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
                 }
                 splashDialog.setContentView(splashImageView);
                 splashDialog.setCancelable(false);

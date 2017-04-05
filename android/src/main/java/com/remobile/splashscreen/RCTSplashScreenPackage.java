@@ -14,17 +14,19 @@ import com.facebook.react.uimanager.ViewManager;
 
 public class RCTSplashScreenPackage implements ReactPackage {
     private Activity activity;
+    private boolean translucent;
 
-    public RCTSplashScreenPackage(Activity activity) {
+    public RCTSplashScreenPackage(Activity activity, boolean translucent) {
         super();
         this.activity = activity;
+        this.translucent = translucent;
     }
 
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         return Arrays.<NativeModule>asList(
-                new RCTSplashScreen(reactContext, activity)
+                new RCTSplashScreen(reactContext, activity, translucent)
         );
     }
 
