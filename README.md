@@ -119,9 +119,10 @@ var KitchenSink = React.createClass({
 AppRegistry.registerComponent('KitchenSink', () => KitchenSink);
 ```
 
-
+### constants
+- `translucent` is translucent enable
 ### methods
-- hide() hide SplashScreen
+- `hide()` hide SplashScreen
 
 
 ### see detail use

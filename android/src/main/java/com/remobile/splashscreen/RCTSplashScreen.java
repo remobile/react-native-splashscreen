@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Handler;
+import android.support.annotation.Nullable;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,9 @@ import android.widget.LinearLayout;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.common.MapBuilder;
+
+import java.util.Map;
 
 
 public class RCTSplashScreen extends ReactContextBaseJavaModule {
@@ -30,7 +35,7 @@ public class RCTSplashScreen extends ReactContextBaseJavaModule {
     public RCTSplashScreen(ReactApplicationContext reactContext,  Activity activity, boolean translucent) {
         super(reactContext);
         this.activity = activity;
-        this.translucent = translucent;
+        this.translucent = translucent && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
         showSplashScreen();
     }
 
@@ -41,6 +46,11 @@ public class RCTSplashScreen extends ReactContextBaseJavaModule {
 
     protected Activity getActivity() {
         return activity;
+    }
+
+    @Override
+    public @Nullable Map<String, Object> getConstants() {
+        return MapBuilder.<String, Object>of("translucent", translucent);
     }
 
     @ReactMethod
