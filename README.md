@@ -66,6 +66,8 @@ protected List<ReactPackage> getPackages() {
 * register module (in MainActivity.java)
 
 ```java
+import android.app.Activity;          // <------ add here
+
 public class MainActivity extends ReactActivity {
     public static Activity activity;           // <------ add here
     ......
