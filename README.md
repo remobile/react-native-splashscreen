@@ -32,8 +32,8 @@ RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
 ### Installation (Android)
 ```gradle
 ...
-include ':react-native-splashscreen'
-project(':react-native-splashscreen').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-splashscreen/android')
+include ':@remobile/react-native-splashscreen'
+project(':@remobile/react-native-splashscreen').projectDir = new File(rootProject.projectDir, '../node_modules/@remobile/react-native-splashscreen/android')
 ```
 
 * In `android/app/build.gradle`
